@@ -1,7 +1,10 @@
 #!/usr/bin/python
 
 #I LOVE PYTHON :) 
+## Checking NetWork From ARP POISONING AND INFORMATION GATHERING ATTACKS Using Scapy Library
+## By: Oseid Aldary
 
+## START :) 
 from scapy.layers.l2 import ARP,Ether,sniff
 
 db = {}
@@ -19,7 +22,16 @@ def security(pkt):
 		else:
 			db[ip] = mac
 			return "[!]Warning :>> SomeOne Is Trying To Gathering info from Router: | %s | %s "%(mac,ip)
-
-
+# StartChecking ... :)
+print("\n[#] Checking NetWok Start [#]\n")
 sniff(store=0,prn=security)
+#Done! :)
 
+##############################################################
+##################### 		     #########################
+#####################  END OF SCRIPT #########################
+#####################                #########################
+##############################################################
+#This SCRIPT by Oseid Aldary
+#Have a nice day :)
+#GoodBye
