@@ -18,11 +18,12 @@ def security(pkt):
 					target = pkt[Ether].dst
 				else:
 					target = "%s?" % pkt[ARP].pdst
-				return "[!]:Worning! :>> Poisoning Attack: Target: %s | Victem: %s | Attacker: %s " %(target,ip,mac)
+				return "[!]:Worning! :>> Poisoning Attack: Target: {} | Victem: {} | Attacker: {} ".format(target,ip,mac)
 		else:
 			db[ip] = mac
-			return "[!]Warning :>> SomeOne Is Trying To Gathering info from Router: | %s | %s "%(mac,ip)
-# StartChecking ... :)
+			return "[!]Warning :>> SomeOne Is Trying To Gathering info from Router: | {} | {} ".format(mac,ip)
+# Start Checking ... :)
+
 print("\n[#] Checking NetWok Start [#]\n")
 sniff(store=0,prn=security)
 #Done! :)
