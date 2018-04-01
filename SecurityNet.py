@@ -4,9 +4,12 @@
 ## Checking NetWork From ARP POISONING AND INFORMATION GATHERING ATTACKS Using Scapy Library
 ## By: Oseid Aldary
 
-## START :) 
-from scapy.layers.l2 import ARP,Ether,sniff
-
+## START :)
+try:
+ from scapy.layers.l2 import ARP,Ether,sniff
+except:
+	print("[!] Error The [Scapy] Library Is Not Installed On Your Pc !")
+	exit(1)
 db = {}
 
 def security(pkt):
@@ -24,7 +27,7 @@ def security(pkt):
 			return "[!]Warning :>> SomeOne Is Trying To Gathering info from Router: | {} | {} ".format(mac,ip)
 # Start Checking ... :)
 
-print("\n[#] Checking NetWok Start [#]\n")
+print("\n[#] Checking NetWork Start [#]\n")
 sniff(store=0,prn=security)
 #Done! :)
 
